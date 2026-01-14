@@ -1,22 +1,21 @@
 <?php
 
-
 class Person {
 
-public $name;
-public $inteligence;
-public $gender;
-public $age;
+    public $name;
+    public $intelligence;
+    public $gender;
+    public $age;
 
-function __construct($n, $i, $g, $a) {
-    $this->name = $n;
-    $this->inteligence = $i;
-    $this->gender = $g;
-    $this->age = $a;
+    public function __construct($name, $intelligence, $gender, $age) {
+        $this->name = $name;
+        $this->intelligence = $intelligence;
+        $this->gender = $gender;
+        $this->age = $age;
     }
 
-public function sayHello() {
-echo "<br> Ahoj, jmenuji se" . $this->name;
-echo "<br> Je mi " . $this->age . " let.";
+    public function sayHello() {
+        echo "<br>Ahoj, jmenuji se " . $this->name;
+        echo "<br>Je mi " . $this->age . " let.";
     }
 }

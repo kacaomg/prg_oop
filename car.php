@@ -1,26 +1,16 @@
 <?php
+include_once "Vehicle.php";
+include_once "Person.php";
 
+class Car extends Vehicle {
 
-class Car {
+    public $person = null;
 
-public $model;
-public $color;
-public $gas_in_tank;
-public $consumption;
-public $person = null;
-
-
-function __construct($m, $c, $g, $cons) {
-    $this->model = $m;
-    $this->color = $c;
-    $this->gas_in_tank = $g;
-    $this->consumption = $cons;
+    public function __construct($model, $color, $gas, $consumption) {
+        parent::__construct($model, $color, $gas, $consumption);
     }
 
-public function kilometresToGas($kilometres) {
-    return $this->gas_in_tank;
-}
-public function boardPerson($person) {
-    $this->person = $person;
-}
+    public function boardPerson(Person $person) {
+        $this->person = $person;
+    }
 }
